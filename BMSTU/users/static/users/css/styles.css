@@ -1,0 +1,292 @@
+html{
+    font-size: 16px;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+font-family: 'Roboto Condensed', sans-serif;
+}
+.bg-image {
+
+    width: 100%;
+    height: 100vh;
+    background: url('booking_bg_ru.png') left ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg_booking{
+    background: url('booking_bg_ru_long.png')  left top ;
+    height:1500px;
+}
+.bg_dest{
+    background: url('booking_bg_ru_long.png')  left top ;
+    height:2500px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+
+    font-size: 20px;
+    font-weight: 400;
+    color:rgb(255, 255, 255);
+    min-width: 320px;
+
+
+
+}
+
+
+/* HEADER STYLES START */
+.nav-link{
+    color:rgb(255, 255, 255)
+}
+.nav-link:hover{
+    color: rgb(250, 122, 122)
+}
+.navbar{
+    padding:0;
+    height:7vh;
+    z-index: 10;
+
+}
+.navbar-brand{
+  padding-top:0px;
+  padding-bottom: 0px;
+
+}
+.active{
+    /*text-decoration: underline;*/
+    font-weight:bold;
+
+}
+.navbar-custom {
+    background-color: #259FFD;
+    border-radius: 15px;
+    border: 5px solid #ffffff;
+}
+.navbar-nav{
+    padding-left:0px;
+}
+.navbar-nav:first-child{
+    margin-left:0px;
+}
+.nav-item{
+    margin:10px;
+    margin-left:10px;
+    padding-bottom: 0px;
+
+}
+.headline{
+    font-weight: bold;
+}
+
+
+
+/* HEADER STYLES END */
+
+
+/* BOOKING STYLES START */
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh ;
+}
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+
+
+
+.bg-indigo {
+background-color: #259FFD;
+
+}
+@media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+    }
+    .container-md{
+
+    padding:5px;
+    font-size: 20px;
+    color:#ffff;
+
+
+
+}
+}
+
+@media (max-width: 768px){
+
+    .au_info_label{
+  font-size: 16px;
+
+}
+}
+@media (max-width: 992px) {
+.card-registration-2 .bg-indigo {
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+
+}
+    .headline{
+    font-size:30px;
+}
+
+  .navbar-nav{
+      float:right;
+
+    width:50%;
+      background-color: #259FFD;
+    border-radius: 15px;
+    border: 5px solid #FDC637 ;
+    padding-bottom:10px;
+      padding-top:0px;
+
+    }
+
+    .nav-item{
+
+        font-size:16px;
+    height:5vh;
+    margin-bottom:0px;
+        margin-top: 0 ;
+        width:50%;
+
+
+    }
+.form-label{
+    font-size: 16px;
+
+    }
+.au_info_label{
+  font-size: 20px;
+}
+.au_info_txt{
+ font-size: 12px;
+}
+
+.container-md{
+
+    padding:5px;
+    font-size: 16px;
+    color:#ffff;
+
+
+
+}
+
+}
+
+
+.carousel-caption{
+
+    padding-bottom: 0px;
+    padding-left: 0px;
+
+    font-size: 14px;
+}
+
+.card{
+    background: url('main_bg.png')  ;
+    border: 5px solid  #259FFD;
+    border-radius: 25px;
+    margin:20px;
+
+}
+.fw-normal{
+    color: #ffffff;
+}
+
+.info_item{
+
+    background-color: #383838;
+    border-radius:15px;
+    border: 5px solid  #259FFD ;
+    color:#ffff;
+    margin-bottom:5px;
+
+}
+.field_item{
+    background-color: #383838;
+    border-radius:15px;
+    border: 5px solid  #259FFD ;
+    color:#ffff;
+    margin-bottom:20px;
+    padding:3px;
+
+
+}
+
+
+.btn-md{
+
+
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 5px solid #ffffff;
+    padding:5px;
+    background-color:#259FFD ;
+
+}
+.btn-md:hover{
+     border: 5px solid #1ef631;
+    padding:5px;
+    background-color:#259FFD ;
+      transition: 0.5s ;
+}
+.dropdown-toggle{
+    background-color: rgb(255, 255, 255);
+}
+.dropdown-toggle:hover{
+    background-color: rgb(255, 255, 255);
+    color:black
+}
+
+  .d-block {
+        border-radius: 15px;
+    border: 5px  solid  #259FFD;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      max-height: 250px;
+  }
+  .d-block_main {
+
+      max-height: 500px;
+        border-radius:25px;
+    border: 5px solid  #259FFD; ;
+  }
+  .booking_btn{
+
+  }
+/* BOOKING STYLES END */
+/* REG STYLES START */
+.bg-reg{
+
+
+    background-color: rgba(255, 250, 240, 0);
+}
+.form-control{
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    border-radius: 10px;
+
+
+}
+/* REG STYLES END */
+
+
+/* ABUS STYLES START */
+
+.au_info{
+    width: 100%;
+    height: 500px;
+
+}
+/* ABUS STYLES END */
