@@ -78,8 +78,11 @@ def user_login(request):
                 else:
                     return HttpResponse('Disabled account')
             else:
-                return redirect('login')
-                # return HttpResponse('Неверное имя пользователя')
+                err = loader.get_template('users/login.html')
+                context = {'user': user}
+                return HttpResponse(err.render(context, request))
+
+
     else:
         log_form = LoginForm()
     template = loader.get_template('users/login.html')
