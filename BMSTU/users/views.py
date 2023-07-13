@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.template import loader
 from django.http import HttpResponse
 from .forms import UserRegisterForm, LoginForm
@@ -59,6 +59,7 @@ def registration(request):
 
 
 def profile(request):
+
     template = loader.get_template("users/profile.html")
     context = {}
     return HttpResponse(template.render(context, request))
@@ -87,4 +88,11 @@ def user_login(request):
         log_form = LoginForm()
     template = loader.get_template('users/login.html')
     context = {'log_form': log_form}
+    return HttpResponse(template.render(context, request))
+
+
+def user_logout(request):
+    logout(request)
+    template = loader.get_template('users/logout.html')
+    context = {}
     return HttpResponse(template.render(context, request))
