@@ -1,7 +1,8 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.models import AnonymousUser
 from django.template import loader
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .forms import UserRegisterForm, LoginForm
 from django.contrib import messages
 
@@ -58,41 +59,43 @@ def registration(request):
 #             return render(request, 'users/registration.html', {'user_form': user_form})
 
 
-def profile(request):
-
+def user_profile(req):
+    # if AnonymousUser.is_anonymous:
+    #     log = loader.get_template("users/login.html")
+    #     context = {}
+    #     return HttpResponse(log.render(context, req))
+    # else:
     template = loader.get_template("users/profile.html")
     context = {}
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render(context, req))
 
 
-def user_login(request):
-    if request.method == 'POST':
-        log_form = LoginForm(request.POST)
+def user_login(req):
+    if req.method == 'POST':
+        log_form = LoginForm(req.POST)
         if log_form.is_valid():
             cd = log_form.cleaned_data
             user = authenticate(username=cd['username'], password=cd['password'])
             if user is not None:
                 if user.is_active:
-                    login(request, user)
+                    login(req, user)
                     log = loader.get_template('users/profile.html')
-                    return HttpResponse(log.render({}, request))
+                    return HttpResponse(log.render({}, req))
                 else:
                     return HttpResponse('Disabled account')
             else:
                 err = loader.get_template('users/login.html')
                 context = {'user': user}
-                return HttpResponse(err.render(context, request))
-
-
+                return HttpResponse(err.render(context, req))
     else:
         log_form = LoginForm()
     template = loader.get_template('users/login.html')
     context = {'log_form': log_form}
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render(context, req))
 
 
-def user_logout(request):
-    logout(request)
+def user_logout(req):
+    logout(req)
     template = loader.get_template('users/logout.html')
     context = {}
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render(context, req))
