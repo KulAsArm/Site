@@ -65,18 +65,13 @@
                             <div class="col-lg-12 d-flex justify-content-center text-white">
                               <div class="p-4">
 
-                               {% if user is not None %}
+
                                   {{log_form.username}}</br>
                                 {{log_form.password}}</br>
                                    <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
                                      Войти
-                                 </button>
-                                  {% else %}
-                                  <p>Введеные данные неверны</p>
-                                  <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
-                                     Вернуться
-                                 </button>
-                                  {% endif %}
+                                       </button>
+                                       <span>{{err}}</span>
                                   {% csrf_token %}
 
 

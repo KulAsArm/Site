@@ -26,7 +26,7 @@ def validate_group(value):
 
 class Student(models.Model):
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='student', related_query_name='student')
     FIO = models.CharField(max_length=100, unique=True, null=False)
     email = models.EmailField(max_length=50, unique=True, null=False)
     phone = models.CharField(max_length=16, validators=[validate_phone])
@@ -36,12 +36,10 @@ class Student(models.Model):
         return self.FIO
 
 
+
+
 @receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
+def create_or_save_user_profile(sender, instance, created, **kwargs):
     if created:
         Student.objects.create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
     instance.student.save()

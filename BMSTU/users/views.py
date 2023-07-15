@@ -5,6 +5,7 @@ from django.template import loader
 from django.http import HttpResponse, Http404
 from .forms import UserRegisterForm, LoginForm, UserProfileForm, User
 from django.contrib import messages
+from django.db import transaction
 
 
 # def registration(request):
@@ -25,7 +26,7 @@ from django.contrib import messages
 
 def registration(request):
     if request.method == 'POST':
-        user_form = UserRegisterForm(request.POST, instance=request.user)
+        user_form = UserRegisterForm(request.POST)
         if user_form.is_valid():
             # Create a new user object but avoid saving it yet
             new_user = user_form.save(commit=False)
@@ -35,7 +36,7 @@ def registration(request):
             new_user.save()
             return render(request, 'users/registration_done.html', {'new_user': new_user})
     else:
-        user_form = UserRegisterForm(instance=request.user)
+        user_form = UserRegisterForm()
     template = loader.get_template('users/registration.html')
     context = {'user_form': user_form}
     #     # return render(request, 'users/regr.html', {'form': form})
@@ -59,16 +60,18 @@ def registration(request):
 #             return render(request, 'users/registration.html', {'user_form': user_form})
 
 
+@transaction.atomic
 def user_profile(request):
     if request.method == 'POST':
         student = UserProfileForm(request.POST, instance=request.user.student)
         if student.is_valid():
-            idx = student.id(request)
+            idx = request.user.id
+            cd = student.cleaned_data
             user_change_profile = User.objects.get(id=idx)
-            user_change_profile.student.FIO = student.FIO
-            user_change_profile.student.email = student.email
-            user_change_profile.student.group = student.group
-            user_change_profile.student.phone = student.phone
+            user_change_profile.student.FIO = cd['FIO']
+            user_change_profile.student.email = cd['email']
+            user_change_profile.student.group = cd['group']
+            user_change_profile.student.phone = cd['phone']
             user_change_profile.save()
             return redirect('profile')
         else:
@@ -84,11 +87,11 @@ def user_profile(request):
     # return redirect('index/')
 
 
-def user_profile_student(request):
-    student = Student.objects.all()
-    template = loader.get_template("users/student_profile.html")
-    context = {'student': student}
-    return HttpResponse(template.render(context, request))
+# def user_profile_student(request):
+#     student = Student.objects.all()
+#     template = loader.get_template("users/student_profile.html")
+#     context = {'student': student}
+#     return HttpResponse(template.render(context, request))
 
 
 def user_login(request):
@@ -105,8 +108,9 @@ def user_login(request):
                 else:
                     return HttpResponse('Disabled account')
             else:
+                error = 'Введен неправильный логин или пароль'
                 err = loader.get_template('users/login.html')
-                context = {'user': user}
+                context = {'user': user, "err": error}
                 return HttpResponse(err.render(context, request))
     else:
         log_form = LoginForm()
