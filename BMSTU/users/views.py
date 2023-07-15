@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import AnonymousUser
 from django.template import loader
 from django.http import HttpResponse, Http404
-from .forms import UserRegisterForm, LoginForm
+from .forms import UserRegisterForm, LoginForm, StudentForm, Student
 from django.contrib import messages
 
 
@@ -59,43 +59,58 @@ def registration(request):
 #             return render(request, 'users/registration.html', {'user_form': user_form})
 
 
-def user_profile(req):
-    # if AnonymousUser.is_anonymous:
-    #     log = loader.get_template("users/login.html")
-    #     context = {}
-    #     return HttpResponse(log.render(context, req))
-    # else:
+def user_profile(request):
+    if request.method == 'POST':
+        student = StudentForm(request.POST)
+        if student.is_valid():
+            student.save()
+            return redirect('profile')
+        else:
+            error = "формат заполнения полей неверный"
+            template = loader.get_template("users/profile.html")
+            context = {'student': student, 'error': error}
+            return HttpResponse(template.render(context, request))
+    else:
+        student = StudentForm()
     template = loader.get_template("users/profile.html")
-    context = {}
-    return HttpResponse(template.render(context, req))
+    context = {'student': student}
+    return HttpResponse(template.render(context, request))
+    # return redirect('index/')
 
 
-def user_login(req):
-    if req.method == 'POST':
-        log_form = LoginForm(req.POST)
+def user_profile_student(request):
+    student = Student.objects.all()
+    template = loader.get_template("users/student_profile.html")
+    context = {'student': student}
+    return HttpResponse(template.render(context, request))
+
+
+def user_login(request):
+    if request.method == 'POST':
+        log_form = LoginForm(request.POST)
         if log_form.is_valid():
             cd = log_form.cleaned_data
             user = authenticate(username=cd['username'], password=cd['password'])
             if user is not None:
                 if user.is_active:
-                    login(req, user)
-                    log = loader.get_template('users/profile.html')
-                    return HttpResponse(log.render({}, req))
+                    login(request, user)
+                    log = loader.get_template('holidays/index.html')
+                    return HttpResponse(log.render({}, request))
                 else:
                     return HttpResponse('Disabled account')
             else:
                 err = loader.get_template('users/login.html')
                 context = {'user': user}
-                return HttpResponse(err.render(context, req))
+                return HttpResponse(err.render(context, request))
     else:
         log_form = LoginForm()
     template = loader.get_template('users/login.html')
     context = {'log_form': log_form}
-    return HttpResponse(template.render(context, req))
+    return HttpResponse(template.render(context, request))
 
 
-def user_logout(req):
-    logout(req)
+def user_logout(request):
+    logout(request)
     template = loader.get_template('users/logout.html')
     context = {}
-    return HttpResponse(template.render(context, req))
+    return HttpResponse(template.render(context, request))

@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+  {% csrf_token %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -56,7 +57,10 @@
                   <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-10">
                       <div class="card " >
-                           <form method="post">
+
+                          {% block content %}
+                           <form  method="post">
+                               {% csrf_token %}
 
                         <div class="card-body p-0 pt-1 ">
                           <h3 class="fw-normal text-center">Личный кабинет</h3>
@@ -64,28 +68,23 @@
 
                             <div class="col-lg-6 d-flex justify-content-center  ">
                               <div class="p-4 ">
-                                <input type="text" placeholder="ФИО" class="field_item"></br>
-                                <input type="text" placeholder="Группа" class="field_item"></br>
-                                <input type="text" placeholder="Телеграм:@name" class="field_item"></br>
+                                {{ student.FIO}}</br>
+                                {{ student.email}}</br>
 
-
-
-                              
-                                  
                               </div>
-                              
-                                
+
                             </div>
 
                             <div class="col-lg-6 d-flex justify-content-center text-white">
                               <div class="p-4">
+                                  {{student.phone}}</br>
+                                  {{student.group}}</br>
 
-                                <input type="text" placeholder="email@mail.ru" class="field_item"></br>
-                                <input type="tel" placeholder="89832500933" class="field_item"></br>
-                                <input type="text" placeholder="" class="field_item"></br>
+
                                  <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
                                      Сохранить данные
                                  </button>
+                                  <span>{{ error }}</span>
 
 
 
@@ -95,6 +94,45 @@
                           </div>
                         </div>
                                </form>
+
+
+
+<!--                            <form action="{% url 'profile' %}" method="get">-->
+
+<!--                        <div class="card-body p-0 pt-1 ">-->
+<!--                          <h3 class="fw-normal text-center">Личный кабинет</h3>-->
+<!--                          <div class="row justify-content-between ">-->
+
+<!--                            <div class="col-lg-6 d-flex justify-content-center  ">-->
+<!--                              <div class="p-4 ">-->
+<!--                                {{ student.FIO}}</br>-->
+<!--                                {{ student.email}}</br>-->
+
+<!--                              </div>-->
+
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-6 d-flex justify-content-center text-white">-->
+<!--                              <div class="p-4">-->
+<!--                                  {{student.phone}}</br>-->
+<!--                                  {{student.group}}</br>-->
+
+
+<!--                                 <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">-->
+<!--                                     Сохранить данные-->
+<!--                                 </button>-->
+
+
+
+
+<!--                              </div>-->
+<!--                            </div>-->
+
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                               </form>-->
+                          {% endblock %}
+
                       </div>
                     </div>
                   </div>

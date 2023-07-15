@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Student
 
 
 # class UserRegisterForm(UserCreationForm):
@@ -65,3 +66,27 @@ class LoginForm(forms.Form):
                 "placeholder": 'Пароль'}), label='Пароль')
 
 
+class StudentForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = ['FIO', 'email', 'phone', 'group']
+
+        widgets = {
+            "FIO": forms.TextInput(attrs={
+                'class': "field_item",
+                "placeholder": 'Иванов Иван Иванович'
+            }),
+            "email": forms.EmailInput(attrs={
+                'class': "field_item",
+                "placeholder": 'email@mail.ru'
+            }),
+            "phone": forms.TextInput(attrs={
+                'class': "field_item",
+                "placeholder": '+79953422112'
+            }),
+            "group": forms.TextInput(attrs={
+                'class': "field_item",
+                "placeholder": 'РК9-63Б'
+            }),
+
+        }
