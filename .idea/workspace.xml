@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55b352ea-00ac-47fb-8e15-e62702c4eae8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/student_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMSTU/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMSTU/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMSTU/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMSTU/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

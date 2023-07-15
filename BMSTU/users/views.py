@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import AnonymousUser
 from django.template import loader
 from django.http import HttpResponse, Http404
-from .forms import UserRegisterForm, LoginForm, StudentForm, Student
+from .forms import UserRegisterForm, LoginForm, UserProfileForm, User
 from django.contrib import messages
 
 
@@ -25,7 +25,7 @@ from django.contrib import messages
 
 def registration(request):
     if request.method == 'POST':
-        user_form = UserRegisterForm(request.POST)
+        user_form = UserRegisterForm(request.POST, instance=request.user)
         if user_form.is_valid():
             # Create a new user object but avoid saving it yet
             new_user = user_form.save(commit=False)
@@ -35,7 +35,7 @@ def registration(request):
             new_user.save()
             return render(request, 'users/registration_done.html', {'new_user': new_user})
     else:
-        user_form = UserRegisterForm()
+        user_form = UserRegisterForm(instance=request.user)
     template = loader.get_template('users/registration.html')
     context = {'user_form': user_form}
     #     # return render(request, 'users/regr.html', {'form': form})
@@ -61,9 +61,15 @@ def registration(request):
 
 def user_profile(request):
     if request.method == 'POST':
-        student = StudentForm(request.POST)
+        student = UserProfileForm(request.POST, instance=request.user.student)
         if student.is_valid():
-            student.save()
+            idx = student.id(request)
+            user_change_profile = User.objects.get(id=idx)
+            user_change_profile.student.FIO = student.FIO
+            user_change_profile.student.email = student.email
+            user_change_profile.student.group = student.group
+            user_change_profile.student.phone = student.phone
+            user_change_profile.save()
             return redirect('profile')
         else:
             error = "формат заполнения полей неверный"
@@ -71,7 +77,7 @@ def user_profile(request):
             context = {'student': student, 'error': error}
             return HttpResponse(template.render(context, request))
     else:
-        student = StudentForm()
+        student = UserProfileForm()
     template = loader.get_template("users/profile.html")
     context = {'student': student}
     return HttpResponse(template.render(context, request))

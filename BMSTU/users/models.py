@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 import re
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -14,7 +17,7 @@ def validate_phone(value):
 
 
 def validate_group(value):
-    reg = "([а-я|А-Я]){2,4}[0-9]{1,2}[-]\d{2,3}([б,Б,М,м])?"
+    reg = "([а-я|А-Я]){1,4}[0-9]{1,2}[-]\d{2,3}([б,Б,М,м])?"
     if not re.match(reg, value):
         raise ValidationError(f'Неверный формат ввода группы {value}')
     else:
@@ -22,7 +25,8 @@ def validate_group(value):
 
 
 class Student(models.Model):
-    id = models.IntegerField(primary_key=True)
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     FIO = models.CharField(max_length=100, unique=True, null=False)
     email = models.EmailField(max_length=50, unique=True, null=False)
     phone = models.CharField(max_length=16, validators=[validate_phone])
@@ -30,3 +34,14 @@ class Student(models.Model):
 
     def __str__(self):
         return self.FIO
+
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Student.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.student.save()

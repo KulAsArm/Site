@@ -66,7 +66,7 @@ class LoginForm(forms.Form):
                 "placeholder": 'Пароль'}), label='Пароль')
 
 
-class StudentForm(forms.ModelForm):
+class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = ['FIO', 'email', 'phone', 'group']
@@ -90,3 +90,6 @@ class StudentForm(forms.ModelForm):
             }),
 
         }
+
+    def id(self, request):
+        return request.user.id
