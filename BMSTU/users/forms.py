@@ -69,7 +69,7 @@ class LoginForm(forms.Form):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = ['FIO', 'email', 'phone', 'group']
+        fields = ['FIO', 'email', 'phone', 'group', 'names_of_priority']
 
         widgets = {
             "FIO": forms.TextInput(attrs={
@@ -88,8 +88,12 @@ class UserProfileForm(forms.ModelForm):
                 'class': "field_item",
                 "placeholder": 'РК9-63Б'
             }),
+            "names_of_priority": forms.TextInput(attrs={
+                'class': "field_item",
+                "placeholder": 'Введите льготы'
+            }),
 
         }
 
-    def id(self, request):
-        return request.user.id
+
+

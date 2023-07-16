@@ -31,6 +31,7 @@ class Student(models.Model):
     email = models.EmailField(max_length=50, unique=True, null=False)
     phone = models.CharField(max_length=16, validators=[validate_phone])
     group = models.CharField(max_length=8, validators=[validate_group])
+    names_of_priority = models.CharField(max_length=500, null=True, default=None)
 
     def __str__(self):
         return self.FIO
