@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b352ea-00ac-47fb-8e15-e62702c4eae8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/profile.html" afterDir="false" />
-    </list>
+    <list default="true" id="55b352ea-00ac-47fb-8e15-e62702c4eae8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,13 +18,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/asylkhan/WEB"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/asylkhan/WEB&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/BMSTU/holidays/templates" />
