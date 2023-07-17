@@ -38,7 +38,9 @@
                         <li class="nav-item">
                             <a class="nav-link " href="/dest">Направления</a>
                         </li>
-
+                        <li class="nav-item justify-content-end">
+                            <a class="nav-link pb-2 "href="/login">Войти</a>
+                        </li>
                         </ul>
                     </div>
                     </div>
@@ -51,41 +53,9 @@
 
                 <div class="container  h-5 pt-1 mt-2 ">
                   <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-10">
-                      <div class="card " >
-                          {% block content %}
-                           <form method="post">
-
-
-                        <div class="card-body p-0 pt-1 ">
-                          <h3 class="fw-normal text-center">Авторизация</h3>
-                          <div class="row justify-content-between ">
-
-
-                            <div class="col-lg-12 d-flex justify-content-center text-white">
-                              <div class="p-4">
-
-
-                                  {{log_form.username}}</br>
-                                {{log_form.password}}</br>
-                                   <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
-                                     Войти
-                                       </button>
-                                       <span>{{err}}</span>
-                                  {% csrf_token %}
-
-
-
-
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                               </form>
-                          {% endblock %}
-                      </div>
-                    </div>
+                   {% block content %}
+                        <p>Выход выполнен</p>
+                        {% endblock %}
                   </div>
                 </div>
 
