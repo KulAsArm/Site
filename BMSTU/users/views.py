@@ -65,6 +65,7 @@ def user_profile(request):
     if request.method == 'POST':
         student = UserProfileForm(request.POST, instance=request.user.student)
         if student.is_valid():
+            print(request.path)
             idx = request.user.id
             email = request.user.email
             print(email)
@@ -76,6 +77,7 @@ def user_profile(request):
             user_change_profile.student.group = cd['group']
             user_change_profile.student.phone = cd['phone']
             user_change_profile.student.names_of_priority = cd['names_of_priority']
+            user_change_profile.student.telegram = cd['telegram']
             user_change_profile.save()
             return redirect('complited_profile')
         else:

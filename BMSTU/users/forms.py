@@ -69,7 +69,7 @@ class LoginForm(forms.Form):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = ['FIO', 'email', 'phone', 'group', 'names_of_priority']
+        fields = ['FIO', 'email', 'phone', 'group', 'names_of_priority', 'telegram']
 
         widgets = {
             "FIO": forms.TextInput(attrs={
@@ -91,6 +91,10 @@ class UserProfileForm(forms.ModelForm):
             "names_of_priority": forms.TextInput(attrs={
                 'class': "field_item",
                 "placeholder": 'Введите льготы'
+            }),
+            "telegram": forms.TextInput(attrs={
+                'class': "field_item",
+                "placeholder": 'Введите telegram-аккаунт'
             }),
 
         }

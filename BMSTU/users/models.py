@@ -24,6 +24,14 @@ def validate_group(value):
         return True
 
 
+def validate_telegram(value):
+    reg = "@[a-z|A-Z]{1,}"
+    if not re.match(reg, value):
+        raise ValidationError(f'Неверный формат ввода аккаунта {value}')
+    else:
+        return True
+
+
 class Student(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='student', related_query_name='student')
@@ -32,11 +40,10 @@ class Student(models.Model):
     phone = models.CharField(max_length=16, validators=[validate_phone])
     group = models.CharField(max_length=8, validators=[validate_group])
     names_of_priority = models.CharField(max_length=500, null=True, default=None)
+    telegram = models.CharField(max_length=20, validators=[validate_telegram])
 
     def __str__(self):
         return self.FIO
-
-
 
 
 @receiver(post_save, sender=User)
