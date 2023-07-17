@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8949d2db-9891-4a4d-a72a-fd710a8bd79c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d51.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d53.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d61.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d63.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d71.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d72.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d73.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d81.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d82.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d83.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/dest.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/dest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="8949d2db-9891-4a4d-a72a-fd710a8bd79c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
