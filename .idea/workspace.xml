@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8949d2db-9891-4a4d-a72a-fd710a8bd79c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d71.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d72.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d73.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d81.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d82.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img/d83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/dest.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/dest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2SWZ5FK5jDbdJNLVEP9nZ3Ih6bI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ilya__1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ilya/test_site&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BMSTU/holidays/templates/holidays" />
+      <recent name="$PROJECT_DIR$/BMSTU/holidays/static/holidays/img" />
+      <recent name="$PROJECT_DIR$/BMSTU/holidays" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8949d2db-9891-4a4d-a72a-fd710a8bd79c" name="Changes" comment="" />
+      <created>1689264112155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689264112155</updated>
+    </task>
+    <servers />
+  </component>
+</project>
