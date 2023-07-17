@@ -4,6 +4,7 @@ import re
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
+from ..holidays.models import Destinations
 
 
 # Create your models here.
@@ -51,3 +52,11 @@ def create_or_save_user_profile(sender, instance, created, **kwargs):
     if created:
         Student.objects.create(user=instance)
     instance.student.save()
+
+
+class Booking(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    destination = models.ForeignKey(Destinations, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return (self.student, self.destination)
