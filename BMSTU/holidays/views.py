@@ -13,10 +13,10 @@ def index(request):
 
 def booking2(request):
     template = loader.get_template("holidays/booking2.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
@@ -31,55 +31,55 @@ def booking3(request):
     return HttpResponse(template.render(context, request))
 def booking4(request):
     template = loader.get_template("holidays/booking4.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
 def booking5(request):
     template = loader.get_template("holidays/booking5.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
 def booking6(request):
     template = loader.get_template("holidays/booking6.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
 def booking7(request):
     template = loader.get_template("holidays/booking7.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
 def booking8(request):
     template = loader.get_template("holidays/booking8.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
 def booking(request):
     template = loader.get_template("holidays/booking.html")
-    dest=Destinations.objects.get(id=1)
-    occ=dest.occ_seats
-    tot=dest.tot_seats
-    res=int((occ/tot)*100)
+    dest = Destinations.objects.get(id=1)
+    occ = dest.occ_seats
+    tot = dest.tot_seats
+    res = int((occ/tot)*100)
     context = {'seat_num':res }
     print(res)
     return HttpResponse(template.render(context, request))
