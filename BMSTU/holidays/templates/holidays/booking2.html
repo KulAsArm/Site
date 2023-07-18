@@ -137,9 +137,10 @@
                                     </br>
 
 
-
+                                            {% csrf_token %}
+                                       {% block content %}
                                       <form method="post">
-
+  {% csrf_token %}
                                     <div class="btn-group dropdown">
                                       <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         Выберите даты поездки
@@ -147,51 +148,30 @@
                                       <ul class="dropdown-menu field_item">
 
                                         <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA1
-                                        </label>
+
+                                            <input type="checkbox" name="date" value="2023-06-10" id="2023-06-10">
+                                        <label for="2023-06-10">2023-06-10</label>
                                         </li>
                                         <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA2
-                                        </label>
+                                               <input type="checkbox" name="date" value="01.07.23" id="01.07.23">
+                                        <label for="01.07.23">01.07.23</label>
                                             </br>
                                         </li>
                                         <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA3
-                                        </label>
+                                                <input type="checkbox" name="date" value="20.07.23" id="20.07.23">
+                                        <label for="20.07.23">20.07.23</label>
                                         </li>
-                                          <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA4
-                                        </label>
-                                        </li><li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA5
-                                        </label>
-                                        </li>
-
 
                                       </ul>
                                     </div>
                                         </br>
                                       </br>
 
-                                  <button type="button" class="btn btn-light book_btn btn-lg text-white "
+                                  <button type="submit" class="btn btn-light book_btn btn-lg text-white "
                                           data-mdb-ripple-color="dark"type="submit">Забронировать</button>
 
-
-
-
-
-
                                       </form>
+                                      {% endblock %}
 
                                   </div>
                                 </div>
