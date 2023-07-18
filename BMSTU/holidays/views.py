@@ -28,13 +28,15 @@ def booking2(request):
             dest.occ_seats = count
             dest.save()
             booking = Booking()
-            booking.student = request.user.student
-            booking.destination = dest
+            booking.id_student = request.user.student.id
+            booking.id_destination = dest.id
+            booking.save()
             template = loader.get_template("holidays/booking2.html")
             occ = dest.occ_seats
             tot = dest.tot_seats
             res = int((occ / tot) * 100)
             context = {'seat_num': res}
+
             return HttpResponse(template.render(context, request))
     else:
         template = loader.get_template("holidays/booking2.html")
