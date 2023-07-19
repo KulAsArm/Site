@@ -55,10 +55,9 @@ def create_or_save_user_profile(sender, instance, created, **kwargs):
 
 
 class Booking(models.Model):
-    # id_student = models.IntegerField(default=None, unique=True)
-    # id_destination = models.IntegerField(default=None, unique=True)
+
     student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True)
     destination = models.ForeignKey(Destinations, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return (self.student, self.destination)
+        return f'{self.student_id,self.destination_id}'

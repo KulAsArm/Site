@@ -1,16 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
-from .models import Student, Booking
+from .models import Student
 
-
-# class UserRegisterForm(UserCreationForm):
-#     email = forms.EmailField()
-#
-#     class Meta:
-#         model = User
-#         fields = ['username', 'email', 'password1', 'password2']
-#
 
 class UserRegisterForm(forms.ModelForm):
     password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': "field_item",
@@ -48,23 +39,10 @@ class UserRegisterForm(forms.ModelForm):
             return cd['password2']
 
 
-# class UserRegisterForm(UserCreationForm):
-#     class Meta:
-#         model = User
-#         fields = ['username', 'email', 'password1', 'password2']
-#
-#     def __init__(self, *args, **kwargs):
-#         super(UserRegisterForm, self).__init__(*args, **kwargs)
-#         self.fields['username'].widget.attrs['style'] = 'border-radius: 10px'
-#         self.fields['email'].widget.attrs['style'] = 'border-radius: 10px'
-#         self.fields['password1'].widget.attrs['style'] = 'border-radius: 10px'
-#         self.fields['password2'].widget.attrs['style'] = 'border-radius: 10px'
-
 class LoginForm(forms.Form):
     username = forms.CharField(label='Имя пользователя', widget=forms.TextInput(attrs={ 'class': "field_item",   "placeholder": 'Имя пользователя'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={ 'class': "field_item",
                 "placeholder": 'Пароль'}), label='Пароль')
-
 
 
 class UserProfileForm(forms.ModelForm):
@@ -100,8 +78,3 @@ class UserProfileForm(forms.ModelForm):
 
         }
 
-
-# class BookingForm(forms.ModelForm):
-#     class Meta:
-#         model = Booking
-#         fields = ['student', 'destination']

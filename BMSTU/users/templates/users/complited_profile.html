@@ -1,7 +1,7 @@
 <!doctype html>
 {% load static %}
   {% csrf_token %}
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,10 +38,10 @@
                             <a class="nav-link " href="/dest">Направления</a>
                         </li>
                         <li class="nav-item justify-content-end">
-                            <a class="nav-link active text-light pb-2 "href="/profile">Личный кабинет</a>
+                            <a class="nav-link active text-light pb-2 "href="/complited_profile">Личный кабинет</a>
                         </li>
                              <li class="nav-item justify-content-end">
-                            <a class="nav-link active text-light pb-2 "href="/logout">Выйти</a>
+                            <a class="nav-link  text-light pb-2 "href="/logout">Выйти</a>
                         </li>
                         </ul>
                     </div>
@@ -80,6 +80,14 @@
 
                                           {{cd.telegram}}
                                         </div></br>
+                                   <div class="container-md py-1 info_item">
+
+                                       {% for dest in dests %}
+                                        <tr>
+                                            <td>{{ dest }}</td></br></br>
+                                        </tr>
+                                        {% endfor %}
+                                        </div>
 
                               </div>
 
@@ -102,7 +110,10 @@
                                           {{cd.names_of_priority}}
                                         </div>
                                   </br>
-
+<a href="/delete">
+      <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
+                                     Удалить профиль
+                                 </button></a>
                                     <a href="/profile">
                                  <button  class="btn btn-light btn-md text-white"  data-mdb-ripple-color="dark"type="submit">
                                      Изменить данные

@@ -5,16 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8949d2db-9891-4a4d-a72a-fd710a8bd79c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BMSTU/users/migrations/0020_alter_student_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BMSTU/users/migrations/0021_alter_student_fio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMSTU/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/abus.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/abus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking2.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking3.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking4.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking5.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking6.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking7.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking8.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/booking8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/dest.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/dest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/templates/holidays/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/holidays/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/holidays/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMSTU/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/complited_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/complited_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/reg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/registration_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/templates/users/registration_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/templates/users/student_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMSTU/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BMSTU/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,14 +52,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ilya__1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/asylkhan/WEB/BMSTU&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "ilya__1",
+    "last_opened_file_path": "/home/asylkhan/WEB/BMSTU"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/BMSTU" />

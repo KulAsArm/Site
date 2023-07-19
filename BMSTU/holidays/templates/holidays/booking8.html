@@ -35,10 +35,16 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light active" href="/dest">Направления</a>
-                        </li>
-                        <li class="nav-item justify-content-end">
-                            <a class="nav-link pb-2 "href="/profile">Личный кабинет</a>
-                        </li>
+                   {% block content %}
+                            {% if request.user.is_authenticated %}
+                                   <li class="nav-item justify-content-end">
+                                                        <a class="nav-link pb-2 "href="/complited_profile">Личный кабинет</a>
+                                                    </li>
+                            {% else %}
+                                   <li class="nav-item justify-content-end">
+                                                        <a class="nav-link pb-2 "href="/login">Войти</a>
+                                                    </li>
+                            {% endif %}
                         </ul>
                     </div>
                     </div>
@@ -146,9 +152,6 @@
                                       </br>
 
 
-
-                                     {% csrf_token %}
-                                       {% block content %}
                                       <form method="post">
   {% csrf_token %}
                                     <div class="btn-group dropdown">
