@@ -8,22 +8,6 @@ from django.contrib import messages
 from django.db import transaction
 
 
-# def registration(request):
-#     if request.method == 'POST':
-#         form = UserRegisterForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get('username')
-#             messages.success(request, f"Аккаунт {username} создан, пожалуйста, посетите личный кабинет на сайте.")
-#             return redirect('login')
-#     else:
-#         form = UserRegisterForm()
-#     template = loader.get_template('users/registration.html')
-#     context = {'form': form}
-#     # return render(request, 'users/regr.html', {'form': form})
-#     return HttpResponse(template.render(context, request))
-
-
 def registration(request):
     if request.method == 'POST':
         user_form = UserRegisterForm(request.POST)
@@ -39,25 +23,7 @@ def registration(request):
         user_form = UserRegisterForm()
     template = loader.get_template('users/registration.html')
     context = {'user_form': user_form}
-    #     # return render(request, 'users/regr.html', {'form': form})
     return HttpResponse(template.render(context, request))
-    # return render(request, 'users/registration.html', {'user_form': user_form})
-
-# def registration(request):
-#     if request.method == 'GET':
-#         user_form = UserRegisterForm()
-#         return render(request, 'users/registration.html', {'form': user_form})
-#     if request.method == "POST":
-#         user_form = UserRegisterForm(request.POST)
-#         if user_form.is_valid():
-#             user = user_form.save(commit=False)
-#             user.username = user.username.lower()
-#             user.save()
-#             messages.success(request, "Вы успешно зарегистрировались. Разрегистрируйтесь живо.")
-#             login(request, user)
-#             return redirect('posts')
-#         else:
-#             return render(request, 'users/registration.html', {'user_form': user_form})
 
 
 @transaction.atomic
@@ -90,29 +56,15 @@ def user_profile(request):
     template = loader.get_template("users/profile.html")
     context = {'student': student}
     return HttpResponse(template.render(context, request))
-    # return redirect('index/')
 
 
 @transaction.atomic
 def user_complited_profile(request):
-
     temp_user = request.user.student
-    # student.FIO = temp_user.FIO
-    # student.email = temp_user.email
-    # student.phone = temp_user.phone
-    # student.group = temp_user.group
-    # student.names_of_priority = temp_user.names_of_priority
     cd = temp_user
     context = {'cd': cd}
     template = loader.get_template("users/complited_profile.html")
     return HttpResponse(template.render(context, request))
-
-
-# def user_profile_student(request):
-#     student = Student.objects.all()
-#     template = loader.get_template("users/student_profile.html")
-#     context = {'student': student}
-#     return HttpResponse(template.render(context, request))
 
 
 def user_login(request):
