@@ -36,7 +36,7 @@ def validate_telegram(value):
 class Student(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='student', related_query_name='student')
-    FIO = models.CharField(max_length=100, null=False)
+    FIO = models.CharField(max_length=100,  null=False)
     email = models.EmailField(max_length=50, null=False)
     phone = models.CharField(max_length=16, validators=[validate_phone])
     group = models.CharField(max_length=8, validators=[validate_group])

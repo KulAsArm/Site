@@ -15,7 +15,7 @@
 
   <body >
     <div class="bg-image bg_booking">
-       
+
         <div class="container ">
         <div class="row justify-content-between">
                  <nav class="navbar navbar-custom navbar-expand-lg ">
@@ -44,12 +44,12 @@
                     </div>
                 </nav>
             <div class="col-1">
-                
+
             </div>
             <div class="col-10">
 
-                
-               
+
+
                     <div class="container  h-5">
                       <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-12">
@@ -107,22 +107,20 @@
                                         <h5 class="fw-normal   mb-1">Размещение:</h5>
                                         <div class="container-md info_item">
 
-                                          <p>Оснащение комнат повышенной комфортности: мебель, ванная комната с душем, кабельное телевидение и холодильник. Они оборудованы системами кондиционирования. Подача водоснабжения осуществляется круглосуточно.</p>
+                                          Оснащение комнат повышенной комфортности: мебель, ванная комната с душем, кабельное телевидение и холодильник. Они оборудованы системами кондиционирования. Подача водоснабжения осуществляется круглосуточно.
                                         </div>
                                         <h5 class="fw-normal   mb-1"></h5class>Питание:</h5>
                                         <div class="container-md info_item">
 
-                                          <p>Трехразовое питание по системе «шведский стол», возможность предварительного заказа блюд.</p>
+                                          Трехразовое питание по системе «шведский стол», возможность предварительного заказа блюд.
                                         </div>
                                         <h5 class="fw-normal   mb-1"></h5class>Как добраться:</h5>
                                         <div class="container-md info_item">
 
-                                          <p>Трансфер - заказной автобус.</p>
+                                          Трансфер - заказной автобус.
                                         </div>
-                                         </br>
-                                        <div class="progress">
-                                          <div class="progress-bar " role="progressbar" style="width:{{seat_num}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
+
+
                                      </div>
 
 
@@ -134,12 +132,26 @@
                                 <div class="col-lg-6 bg-indigo  text-white">
                                   <div class="p-5 py-2">
                                     <h3 class="fw-normal booking_txt fw-bold mb-1">Внимательно прочитайте описание и выберете дату поездки.</h3>
-                                    </br>
+                                     <div class="my-0 text-dark fw-bold "> На 15.07.2023 занято:</div>
+                                      <div class="progress  ">
+
+
+                                          <div class="progress-bar  " role="progressbar" style="width:{{seat_num}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </br>
+                                       <div class="my-0 text-dark fw-bold ">На 01.08.2023 занято:</div>
+                                      <div class="progress ">
+
+                                          <div class="progress-bar " role="progressbar" style="width:{{seat_num2}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </br>
 
 
 
+                                    {% csrf_token %}
+                                       {% block content %}
                                       <form method="post">
-
+  {% csrf_token %}
                                     <div class="btn-group dropdown">
                                       <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         Выберите даты поездки
@@ -147,34 +159,14 @@
                                       <ul class="dropdown-menu field_item">
 
                                         <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA1
-                                        </label>
+
+                                            <input type="checkbox" name="date" value="2023-06-10" id="2023-06-10">
+                                        <label for="2023-06-10">2023-06-10</label>
                                         </li>
                                         <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA2
-                                        </label>
+                                               <input type="checkbox" name="date" value="2023-07-01" id="2023-07-01">
+                                        <label for="2023-07-01">2023-07-01</label>
                                             </br>
-                                        </li>
-                                        <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA3
-                                        </label>
-                                        </li>
-                                          <li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA4
-                                        </label>
-                                        </li><li class="dates">
-                                          <label>
-                                            <input type="checkbox" name=" DATA1" value="true">
-                                        DATA5
-                                        </label>
                                         </li>
 
 
@@ -183,15 +175,11 @@
                                         </br>
                                       </br>
 
-                                  <button type="button" class="btn btn-light book_btn btn-lg text-white "
+                                  <button type="submit" class="btn btn-light book_btn btn-lg text-white "
                                           data-mdb-ripple-color="dark"type="submit">Забронировать</button>
 
-
-
-
-
-
                                       </form>
+                                      {% endblock %}
 
                                   </div>
                                 </div>
