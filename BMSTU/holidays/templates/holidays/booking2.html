@@ -15,7 +15,7 @@
 
   <body >
     <div class="bg-image bg_booking">
-       
+
         <div class="container ">
         <div class="row justify-content-between">
                  <nav class="navbar navbar-custom navbar-expand-lg ">
@@ -44,12 +44,12 @@
                     </div>
                 </nav>
             <div class="col-1">
-                
+
             </div>
             <div class="col-10">
 
-                
-               
+
+
                     <div class="container  h-5">
                       <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-12">
@@ -58,7 +58,7 @@
                               <div class="row g-0">
                                 <div class="col-lg-6 ">
                                   <div class="p-4 pt-2 ">
-                                    <h3 class="fw-normal   mb-1 text-center">Название направления</h3>
+                                    <h3 class="fw-normal   mb-1 text-center">СОЛ "Бауманец"</h3>
 
                                     <div class="row">
                                           <div id="carouselExampleCaptions" class="carousel slide">
@@ -107,22 +107,20 @@
                                         <h5 class="fw-normal   mb-1">Размещение:</h5>
                                         <div class="container-md info_item">
 
-                                          <p>Самое лучшее место для отдыха в лесу недалеко от Москвы! Волшебный воздух соснового бора. Отремонтированные чистые корпуса с наличием постельного белья для каждого проживающего, Чистые ванные комнаты и туалеты.</p>
+                                          Самое лучшее место для отдыха в лесу недалеко от Москвы! Волшебный воздух соснового бора. Отремонтированные чистые корпуса с наличием постельного белья для каждого проживающего, Чистые ванные комнаты и туалеты.
                                         </div>
                                         <h5 class="fw-normal   mb-1"></h5class>Питание:</h5>
                                         <div class="container-md info_item">
 
-                                          <p>Трёхразовое. Еда ,по отзывам многих - "Очень вкусная"</p>
+                                          Трёхразовое. Еда ,по отзывам многих - "Очень вкусная"
                                         </div>
                                         <h5 class="fw-normal   mb-1"></h5class>Как добраться:</h5>
                                         <div class="container-md info_item">
 
-                                          <p>Деревня Соколова Пустынь, городской округ Ступино.Электричка, автобус или автомобиль.</p>
+                                          Деревня Соколова Пустынь, городской округ Ступино.Электричка, автобус или автомобиль.
                                         </div>
-                                         </br>
-                                        <div class="progress">
-                                          <div class="progress-bar " role="progressbar" style="width:{{seat_num}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
+
+
                                      </div>
 
 
@@ -133,11 +131,31 @@
 
                                 <div class="col-lg-6 bg-indigo  text-white">
                                   <div class="p-5 py-2">
-                                    <h3 class="fw-normal booking_txt fw-bold mb-1">Внимательно прочитайте описание и выберете одну дату поездки.</h3>
+                                    <h3 class="fw-normal booking_txt fw-bold mb-1">Внимательно прочитайте описание и выберете дату поездки.</h3>
+                                     <div class="my-0 text-dark fw-bold "> На 10.06.2023 занято:</div>
+                                      <div class="progress  ">
+
+
+                                          <div class="progress-bar  " role="progressbar" style="width:{{seat_num}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </br>
+                                       <div class="my-0 text-dark fw-bold ">На 01.07.2023 занято:</div>
+                                      <div class="progress ">
+
+                                          <div class="progress-bar " role="progressbar" style="width:{{seat_num2}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </br>
+                                       <div class="my-0 text-dark fw-bold ">На 20.07.2023 занято:</div>
+                                      <div class="progress ">
+
+                                          <div class="progress-bar " role="progressbar" style="width:{{seat_num3}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </br>
 
 
-                                            {% csrf_token %}
+
+
+                                     {% csrf_token %}
                                        {% block content %}
                                       <form method="post">
   {% csrf_token %}
