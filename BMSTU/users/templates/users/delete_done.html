@@ -38,17 +38,6 @@
                         <li class="nav-item">
                             <a class="nav-link " href="/dest">Направления</a>
                         </li>
-                              {% block content %}
-                             {% csrf_token %}
-
-                                       <li class="nav-item justify-content-end">
-                                                            <a class="nav-link pb-2 "href="/login">Войти</a>
-                                                        </li>
-                             <li class="nav-item justify-content-end">
-                                                            <a class="nav-link pb-2 "href="/registration">Регистрация</a>
-                                                        </li>
-
-
 
                         </ul>
                     </div>
@@ -64,24 +53,22 @@
                   <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-10">
                       <div class="card " >
-                           <form method="post">
+
 
 
                         <div class="card-body p-0 pt-1 ">
-                          <h3 class="fw-normal text-center">Авторизация</h3>
+                          <h3 class="fw-normal text-center">Аккаунт успешно удален!</h3>
                           <div class="row justify-content-between ">
 
 
                             <div class="col-lg-12 d-flex justify-content-center text-white">
                               <div class="p-4">
-
-
-                                  {{log_form.username}}</br>
-                                {{log_form.password}}</br>
+<a href="/registration">
                                    <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
-                                     Войти
+                                     Зарегистрироваться
                                        </button>
-                                       <span>{{err}}</span>
+
+    </a>
                                   {% csrf_token %}
 
 
@@ -93,7 +80,7 @@
                           </div>
                         </div>
                                </form>
-                          {% endblock %}
+
                       </div>
                     </div>
                   </div>

@@ -117,13 +117,15 @@ def user_delete(request):
         id = request.user.id
         user = User.objects.get(id=id)
         user.delete()
-        user_form = UserRegisterForm()
-        template = loader.get_template('users/registration.html')
-        context = {'user_form': user_form}
-        return HttpResponse(template.render(context, request))
+        return redirect('delete_done')
     else:
         template = loader.get_template("users/delete.html")
         context = {}
         return HttpResponse(template.render(context, request))
 
+
+def user_delete_done(request):
+    context = {}
+    template = loader.get_template("users/delete_done.html")
+    return HttpResponse(template.render(context, request))
 

@@ -24,7 +24,8 @@ def views_occ(date, dest_name):
     dest = Destinations.objects.get(name=dest_name, date=date)
     occ = dest.occ_seats
     total = dest.tot_seats
-    return int(100 * occ / total)
+    per = f'{occ} / {total}'
+    return (int(100 * occ / total), per)
 
 
 def index(request):
@@ -47,14 +48,14 @@ def booking2(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
             res3 = views_occ(date=dest_date[2], dest_name=dest_name)
-            context = {'seat_num2': res2, 'seat_num3': res3, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num3': res3[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1], 'per3': res3[1]}
             return HttpResponse(template.render(context, request))
     else:
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
         res3 = views_occ(date=dest_date[2], dest_name=dest_name)
         template = loader.get_template("holidays/booking2.html")
-        context = {'seat_num2': res2, 'seat_num3': res3, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num3': res3[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1], 'per3': res3[1]}
         return HttpResponse(template.render(context, request))
 
 
@@ -73,14 +74,14 @@ def booking3(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-            context = {'seat_num2': res2, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
             return HttpResponse(template.render(context, request))
     else:
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
         template = loader.get_template("holidays/booking3.html")
-        context = {'seat_num2': res2, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
         return HttpResponse(template.render(context, request))
 
 
@@ -99,7 +100,7 @@ def booking4(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-            context = {'seat_num2': res2, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
             return HttpResponse(template.render(context, request))
     else:
         template = loader.get_template("holidays/booking4.html")
@@ -107,7 +108,7 @@ def booking4(request):
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-        context = {'seat_num2': res2, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
         return HttpResponse(template.render(context, request))
 
 
@@ -126,7 +127,7 @@ def booking5(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-            context = {'seat_num2': res2, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
             return HttpResponse(template.render(context, request))
     else:
         template = loader.get_template("holidays/booking5.html")
@@ -134,7 +135,7 @@ def booking5(request):
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-        context = {'seat_num2': res2, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
         return HttpResponse(template.render(context, request))
 
 
@@ -153,7 +154,7 @@ def booking6(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-            context = {'seat_num2': res2, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
             return HttpResponse(template.render(context, request))
     else:
         template = loader.get_template("holidays/booking6.html")
@@ -161,7 +162,7 @@ def booking6(request):
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-        context = {'seat_num2': res2, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
         return HttpResponse(template.render(context, request))
 
 
@@ -180,14 +181,14 @@ def booking7(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
             res3 = views_occ(date=dest_date[2], dest_name=dest_name)
-            context = {'seat_num2': res2, 'seat_num3': res3, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num3': res3[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1], 'per3': res3[1]}
             return HttpResponse(template.render(context, request))
     else:
         template = loader.get_template("holidays/booking7.html")
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
         res3 = views_occ(date=dest_date[2], dest_name=dest_name)
-        context = {'seat_num2': res2, 'seat_num3': res3, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num3': res3[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1], 'per3': res3[1]}
         return HttpResponse(template.render(context, request))
 
 
@@ -233,7 +234,7 @@ def booking(request):
             res = views_occ(date=dest_date[0], dest_name=dest_name)
             res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-            context = {'seat_num2': res2, 'seat_num': res}
+            context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
             return HttpResponse(template.render(context, request))
     else:
         template = loader.get_template("holidays/booking.html")
@@ -241,7 +242,7 @@ def booking(request):
         res = views_occ(date=dest_date[0], dest_name=dest_name)
         res2 = views_occ(date=dest_date[1], dest_name=dest_name)
 
-        context = {'seat_num2': res2, 'seat_num': res}
+        context = {'seat_num2': res2[0], 'seat_num': res[0], 'per': res[1], 'per2': res2[1]}
         return HttpResponse(template.render(context, request))
 
 
