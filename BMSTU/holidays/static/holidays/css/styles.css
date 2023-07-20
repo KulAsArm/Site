@@ -17,8 +17,8 @@ font-family: 'Roboto Condensed', sans-serif;
     height:1500px;
 }
 .bg_dest{
-    background: url('booking_bg_ru_long.png')  left top ;
-    height:2500px;
+    background: url('booking_bg_ru_long.png')  left  top;
+    height:4500px;
 }
 body{
     background-color: rgb(255, 255, 255);
