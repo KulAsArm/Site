@@ -19,13 +19,6 @@ def dest_update(date, name):
     return dest
 
 
-# def occ_part(dest):
-#     #функция считает процент занятых мест от общего количества
-#     occ = dest.occ_seats
-#     total = dest.tot_seats
-#     return int(100 * occ / total)
-
-
 def views_occ(date, dest_name):
     # функция считает процент занятых мест от общего количества
     dest = Destinations.objects.get(name=dest_name, date=date)

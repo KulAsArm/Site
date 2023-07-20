@@ -1,12 +1,24 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.models import AnonymousUser
 from django.template import loader
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse
 from .forms import UserRegisterForm, LoginForm, UserProfileForm, User
-from django.contrib import messages
 from django.db import transaction
+from .models import Booking, Destinations
 
+
+def user_dest(request):
+    st_id = request.user.student.id
+    books = Booking.objects.filter(student_id=st_id)
+    dests_list = []
+    for book in books:
+        dests_list.append(book.destination_id)
+    print(dests_list)
+    info = []
+    for dest_id in dests_list:
+        dest = Destinations.objects.get(id=dest_id)
+        info.append(f'{dest.name}: {dest.date}')
+    return info
 
 def registration(request):
     if request.method == 'POST':
@@ -61,8 +73,9 @@ def user_profile(request):
 @transaction.atomic
 def user_complited_profile(request):
     temp_user = request.user.student
+    dests = user_dest(request)
     cd = temp_user
-    context = {'cd': cd}
+    context = {'cd': cd, 'dests': dests}
     template = loader.get_template("users/complited_profile.html")
     return HttpResponse(template.render(context, request))
 
@@ -97,3 +110,20 @@ def user_logout(request):
     template = loader.get_template('users/logout.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+
+def user_delete(request):
+    if request.method == 'POST':
+        id = request.user.id
+        user = User.objects.get(id=id)
+        user.delete()
+        user_form = UserRegisterForm()
+        template = loader.get_template('users/registration.html')
+        context = {'user_form': user_form}
+        return HttpResponse(template.render(context, request))
+    else:
+        template = loader.get_template("users/delete.html")
+        context = {}
+        return HttpResponse(template.render(context, request))
+
+
