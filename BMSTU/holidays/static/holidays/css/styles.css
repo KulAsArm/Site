@@ -105,7 +105,19 @@ background-color: rgba(255, 255, 255, 0.46);
      border-radius: 20px;
     border: 5px solid #ffffff;
 }
+@media (min-width: 576px) {
+.booking_txt{
+font-size:20px;
+}
+
+
+.container-md{
+font-size:10px;
+
+}
+}
 @media (min-width: 992px) {
+
 
     .container-md{
 
@@ -119,14 +131,18 @@ background-color: rgba(255, 255, 255, 0.46);
 }
 
 @media (max-width: 768px){
-
+    .col-1 {
+  display: none;
+  }
     .au_info_label{
   font-size: 16px;
 
 }
 }
 @media (max-width: 992px) {
-
+.progress_caption{
+font-size:16px;
+}
     .headline{
     font-size:30px;
 }
@@ -140,7 +156,7 @@ background-color: rgba(255, 255, 255, 0.46);
     width:50%;
       background-color: #259FFD;
     border-radius: 15px;
-    border: 5px solid #FDC637 ;
+    border: 5px solid #FFFF ;
     padding-bottom:10px;
       padding-top:0px;
 
@@ -189,12 +205,13 @@ background-color: rgba(255, 255, 255, 0.46);
 }
 
 .card{
-    background: url('main_bg.png')  ;
+    background: url('main_bg.png') top  ;
     border: 5px solid  #259FFD;
     border-radius: 25px;
     margin:20px;
 
 }
+
 
 
 .fw-normal{
@@ -208,6 +225,7 @@ background-color: rgba(255, 255, 255, 0.46);
     border: 5px solid  #259FFD ;
     color:#ffff;
     padding-bottom:0px;
+    padding-right:0px;
 
 }
 .field_item{
@@ -220,6 +238,7 @@ background-color: rgba(255, 255, 255, 0.46);
 
 
 }
+
 
 
 .btn-md{
@@ -248,12 +267,14 @@ background-color: rgba(255, 255, 255, 0.46);
 .book_btn{
      background-color: #383838;
      border-radius:15px;
+
     border: 5px solid #ffffff;
 }
 .dropdown-toggle{
    background-color: #383838;
     color:#ffff;
      border: 5px solid #ffffff;
+     font-size:16px;
 }
 .dropdown-toggle:hover{
 
@@ -324,3 +345,16 @@ background-color: rgba(255, 255, 255, 0.46);
 
 }
 /* ABUS STYLES END */
+/* PROFILE STYLES START */
+
+.profile_box{
+    width:250px;
+    height:5vh;
+  background-color: #383838;
+    border-radius:15px;
+    border: 5px solid  #259FFD ;
+    color:#ffff;
+
+
+}
+/* PROFILE STYLES END */
