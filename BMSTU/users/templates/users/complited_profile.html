@@ -47,13 +47,13 @@
                     </div>
                     </div>
                 </nav>
-<!--            <div class="col-1">-->
-<!--                -->
-<!--            </div>-->
-            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <div class="col-1">
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 
-                <div class="container  h-5 pt-1 mt-2 ">
+                <div class="container  h-5 pt-1  ">
                   <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                       <div class="card " >
@@ -65,7 +65,7 @@
                           <h3 class="fw-normal text-center">Личный кабинет</h3>
                           <div class="row justify-content-between ">
 
-                            <div class="col-lg-6 d-flex justify-content-center text-white ">
+                            <div class="col-lg-6 d-flex  text-white text-center">
                               <div class="p-4 ">
                                    ФИО
                                 <div class="container-md py-1 info_item   profile_box">
@@ -83,11 +83,12 @@
                                           {{cd.telegram}}
 
                                         </div></br>
-                                   <div class="container-md py-1 info_item">
+                                  Ваши направления
+                                   <div class="container-md py-1 info_item ">
 
                                        {% for dest in dests %}
                                         <tr>
-                                            <td>{{ dest }}</td></br></br>
+                                            <p>{{ dest }}</p>
                                         </tr>
                                         {% endfor %}
 
@@ -117,10 +118,11 @@
                                           {{cd.names_of_priority}}
                                         </div>
                                   </br>
-<a href="/delete">
-      <button  class="btn btn-light btn-md text-white" data-mdb-ripple-color="dark"type="submit">
+                                <a href="/delete">
+      <button  class="btn btn-light  text-white delete_btn" data-mdb-ripple-color="dark"type="submit">
                                      Удалить профиль
-                                 </button></a>
+                                 </button>
+                                </a>
                                     <a href="/profile">
                                  <button  class="btn btn-light btn-md text-white"  data-mdb-ripple-color="dark"type="submit">
                                      Изменить данные
