@@ -97,7 +97,9 @@ padding-right: .75em;
 .card-registration .select-arrow {
 top: 13px;
 }
-
+.reg_done{
+height:600px;
+}
 
 
 .bg-indigo {
@@ -292,7 +294,10 @@ font-size:16px;
   }
   .d-block_main {
 
-      max-height: 500px;
+
+   width:640px;
+   height:360px;
+
         border-radius:25px;
     border: 5px solid  #259FFD; ;
   }
@@ -319,7 +324,19 @@ font-size:16px;
   .date{
       width:50%;
   }
-
+  .delete_btn{
+   margin-top: 10px;
+    border-radius: 15px;
+    border: 5px solid #ffffff;
+    padding:5px;
+    background-color:#259FFD ;
+    }
+.delete_btn:hover{
+border: 5px solid #FF0000;
+    padding:5px;
+    background-color:#259FFD  ;
+      transition: 0.5s ;
+}
 /* BOOKING STYLES END */
 /* REG STYLES START */
 .bg-reg{
@@ -348,7 +365,7 @@ font-size:16px;
 /* PROFILE STYLES START */
 
 .profile_box{
-    width:250px;
+    width:300px;
     height:5vh;
   background-color: #383838;
     border-radius:15px;
